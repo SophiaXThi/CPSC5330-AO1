@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         updateMoodLabel(for: slider.value)
     }
 
+    // Notes about functions references: https://www.w3schools.com/swift/swift_functions.asp
     @IBAction func sliderChanged(_ sender: UISlider) {
         updateMoodLabel(for: sender.value)
     }
@@ -44,6 +45,7 @@ class ViewController: UIViewController {
     private func updateMoodLabel(for rawValue: Float) {
         let value = Int(rawValue.rounded())
 
+        // Used Switch cases because it would be cleaner
         switch value {
         case 0...20:
             currentMoodDescript = "Very Sad"
