@@ -12,7 +12,7 @@ final class AdventureBrain {
     private var index: Int = 0
 
 // Originally wanted to keep track of how many steps. Too afraid to remove it.
-// Tracks how many steps the user has taken (optional UI)
+// Tracks how many steps the user has taken (optional UI?)
     private(set) var step: Int = 1
 
     // ########## STORY DATA needs to have 3+ layers ##########
