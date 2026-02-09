@@ -11,10 +11,11 @@ final class AdventureBrain {
     // Tracks current position in the story array
     private var index: Int = 0
 
-    // Tracks how many steps the user has taken (optional UI)
+// Originally wanted to keep track of how many steps. Too afraid to remove it.
+// Tracks how many steps the user has taken (optional UI)
     private(set) var step: Int = 1
 
-    // ########## STORY DATA (3+ layers) ##########
+    // ########## STORY DATA needs to have 3+ layers ##########
     private let nodes: [AdventureNode] = [
 
         // 0 - START
@@ -30,7 +31,7 @@ final class AdventureBrain {
 
         // 1 - SNACK PATH
         AdventureNode(
-            text: "The llama accepts the snack and follows you like a tiny VIP. The vendor watches closely.",
+            text: "The llama accepts the snack and follows you like fuzzy shadow. The vendor watches closely.",
             choice1: "Ask the vendor to adopt it",
             choice1Destination: 3,
             choice2: "Walk calmly toward your car",
@@ -52,7 +53,7 @@ final class AdventureBrain {
 
         // 3 - VENDOR TEST
         AdventureNode(
-            text: "Vendor: “You may adopt Sir Fluffington if you pass the Official Llama Compatibility Test.”",
+            text: "Vendor says, “You may adopt Sir Fluffington if you pass the Official Llama Compatibility Test.”",
             choice1: "Take the test",
             choice1Destination: 7,
             choice2: "Try charming persuasion",
@@ -63,7 +64,7 @@ final class AdventureBrain {
 
         // 4 - SUCCESS
         AdventureNode(
-            text: "✅ SUCCESS! The llama hops into your car with calm confidence. You drive home with a new fluffy roommate — you take the llama home. 🦙",
+            text: "✅ SUCCESS! The llama follows you with calm confidence. You walk home with a new fluffy roommate — you take the llama home. 🦙",
             choice1: "Play again",
             choice1Destination: 0,
             choice2: "Play again",
@@ -96,7 +97,7 @@ final class AdventureBrain {
 
         // 7 - SUCCESS
         AdventureNode(
-            text: "✅ SUCCESS! You answer correctly: “Llamas prefer peaceful vibes and snack schedules.” Paperwork approved — you take the llama home. 🦙",
+            text: "✅ SUCCESS! You answer correctly: “Llamas prefer peaceful vibes and snack schedules.” Paperwork was approved — you take the llama home. 🦙",
             choice1: "Play again",
             choice1Destination: 0,
             choice2: "Play again",
@@ -107,7 +108,7 @@ final class AdventureBrain {
 
         // 8 - FAILURE
         AdventureNode(
-            text: "❌ FAILURE! Your persuasion summons a committee of geese. They escort you away with intense politeness.",
+            text: "❌ FAILURE! Your persuasion summons a committee of geese. They escort you away with intense politeness, angry honks, and pecks.",
             choice1: "Try again",
             choice1Destination: 0,
             choice2: "Try again",
